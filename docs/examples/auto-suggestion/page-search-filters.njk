@@ -1,7 +1,7 @@
 ---
 layout: layouts/example.njk
-title: Auto suggestion - page search
-description: An example of the default auto suggest page pattern with search button
+title: Auto suggestion - page search with filters
+description: An example of the default auto suggest page pattern with search button and filters
 arguments: auto-suggestion
 ---
 {% from 'tel/components/auto-suggestion/macro.njk' import telAutoSuggestion %}
@@ -12,8 +12,21 @@ arguments: auto-suggestion
   placeholder: "Search the learning hub",
   type: "page",
   search_text: "cardio",
+  show_other: false,
   show_search_button: true,
+  show_filters: true,
   
+  filters: {
+    heading: "Show",
+    showll: true,
+    allLabel: "All",
+    activeTags: ["all"],
+    tags: [
+      { label: "Catalogues", value: "catalogues" },
+      { label: "Courses", value: "courses" },
+      { label: "Resources", value: "resources" }
+    ]
+  },
 
   menu_items: [
       {

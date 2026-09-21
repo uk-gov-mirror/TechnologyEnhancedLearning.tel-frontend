@@ -1,7 +1,7 @@
 ---
 layout: layouts/example.njk
-title: Auto Suggestion using Radio Buttons
-description: An example of the auto suggest pattern using radio buttons
+title: Auto Suggestion using Radio Buttons with pagination
+description: An example of the auto suggest pattern using radio buttons with pagination
 arguments: auto-suggestion
 ---
 {% from 'tel/components/auto-suggestion/macro.njk' import telAutoSuggestion %}
@@ -11,7 +11,43 @@ arguments: auto-suggestion
   input_name: "search-query",
   placeholder: "Search roles",
   type: "Radio",
-    
+  
+  pagination: true,
+  pagination_previous_url: "/example?page=22",
+  pagination_previous_page: "Previous page",
+  pagination_next_url: "/example?page=24",
+  pagination_next_page: "Next page",
+  
+  pagination_items: [
+    {
+      number: 1,
+      href: "/example?page=1"
+    },
+    {
+      ellipsis: true
+    },
+    {
+      number: 22,
+      href: "/example?page=22"
+    },
+    {
+      number: 23,
+      href: "/example?page=23",
+      current: true
+    },
+    {
+      number: 24,
+      href: "/example?page=24"
+    },
+    {
+      ellipsis: true
+    },
+    {
+      number: 42,
+      href: "/example?page=42"
+    }
+  ],
+  
   menu_items: [
     {
       text: "Midwife - Tutor",

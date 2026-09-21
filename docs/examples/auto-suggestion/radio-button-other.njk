@@ -1,7 +1,7 @@
 ---
 layout: layouts/example.njk
-title: Auto Suggestion using Radio Buttons
-description: An example of the auto suggest pattern using radio buttons
+title: Auto Suggestion using Radio Buttons with other option
+description: An example of the auto suggest pattern using radio buttons and an option for the user to add their own response
 arguments: auto-suggestion
 ---
 {% from 'tel/components/auto-suggestion/macro.njk' import telAutoSuggestion %}
@@ -11,7 +11,12 @@ arguments: auto-suggestion
   input_name: "search-query",
   placeholder: "Search roles",
   type: "Radio",
-    
+
+  show_other: true,
+  other_text: "If you cant find your role select other and enter your role manually",
+  other_buttontext: "Other",
+  other_label: "Your role",
+  
   menu_items: [
     {
       text: "Midwife - Tutor",

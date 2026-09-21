@@ -163,7 +163,7 @@
             data-aria-controls="conditional-other-panel-{{ params.id }}">
           
           <label class="nhsuk-label {% if isCheckbox %}nhsuk-checkboxes__label{% else %}nhsuk-radios__label{% endif %}" for="other-choice-escape-{{ params.id }}">
-            {{ params.other_label | default("Other") }}
+            {{ params.other_buttontext | default("Other") }}
           </label>
         </div>
 
@@ -171,7 +171,7 @@
         <div class="{% if isCheckbox %}nhsuk-checkboxes__conditional nhsuk-checkboxes__conditional--hidden{% else %}nhsuk-radios__conditional nhsuk-radios__conditional--hidden{% endif %}" id="conditional-other-panel-{{ params.id }}">
           <div class="nhsuk-form-group">
             <label class="nhsuk-label" for="other-role-manual-input-{{ params.id }}">
-              Your role
+              {{ params.other_label }}
             </label>
             <input class="nhsuk-input nhsuk-u-width-two-thirds" id="other-role-manual-input-{{ params.id }}" name="other-role-manual" type="text">
           </div>

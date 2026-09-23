@@ -7,6 +7,10 @@
 .tel-summary-expander {
   background-color: nhsuk-colour("white");
 
+  .nhsuk-details__summary-text {
+    margin-bottom:1rem;
+  }
+
   &__admin-tag {
     float: right;
     margin-left: 0.5rem;
